@@ -11,5 +11,6 @@ RUN mkdir lab5
 WORKDIR /home/lab5
 COPY trick.sh /home/trick.sh
 RUN chmod +x /home/trick.sh
+COPY ip_list.txt /home/ip_list.txt
 
 ENTRYPOINT ["sh", "/home/trick.sh"]
