@@ -1,1 +1,1 @@
-echo ${1} >> ip_list.txt
+echo ${1} >> scripts/ip_list.txt
