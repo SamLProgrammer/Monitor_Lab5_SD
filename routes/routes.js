@@ -3,7 +3,7 @@ const { launchNewInstance, freeDockerResources, killInstance } = require('../con
 const router = Router();
 
 router.get('/launchNew', launchNewInstance);
-router.get('/kill', killInstance);
+router.post('/kill', killInstance);
 router.post('/freeDockerResources', freeDockerResources);
 
 module.exports = router;
