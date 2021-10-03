@@ -6,7 +6,7 @@ let instances_index = 2;
 const ip_base = '119.18.0.';
 
 const launchNewInstance = (req, res) => {
-    exec(PATH + '/scripts/build.sh ' + instances_index, (err, stdout, stderr) => {
+    exec(PATH + '/scripts/launchInstance.sh ' + instances_index, (err, stdout, stderr) => {
         if (err) {
             console.error(err);
             return;
