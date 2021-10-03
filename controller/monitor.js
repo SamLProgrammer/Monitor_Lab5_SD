@@ -31,8 +31,20 @@ const freeDockerResources = (req, res) =>{
     res.send('ok')
 }
 
+const killInstance = (req, res) => {
+    console.log('Killing ' + req.body.code)
+    exec(PATH + '/scripts/kill.sh ' + req.body.code, (err, stdout, stderr) => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+        //LOGS HERE
+    });
+}
+
 module.exports = {
     launchNewInstance, 
     setIO,
-    freeDockerResources
+    freeDockerResources,
+    killInstance
 }

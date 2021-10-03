@@ -24,6 +24,7 @@ class MyServer{
     routes(){
         this.app.use('/freeDockerResources', require('../routes/routes'));
         this.app.use('/launchNew', require('../routes/routes'));
+        this.app.use('/kill', require('../routes/routes'));
         this.app.use('/', require('../routes/routes'));
     }
 
